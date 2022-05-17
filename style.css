@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --dark-background-color:#111;
+    --dark-bacground-color-alt :#222;
+    --dark-trim-color:#333;
+    --dark-text-color:#eee;
+}
+body{
+    --background-color:#fff;
+    --bacground-color-alt :#eee;
+    --trim-color:#ddd;
+    --text-color:#333;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    height: 100vh;
+    font-family: cursive;
+}
+body.theme-dark{
+    --background-color:var(--dark-background-color);
+    --bacground-color-alt :var(--dark-bacground-color-alt);
+    --trim-color:var(--dark-trim-color);
+    --text-color:var(--dark-text-color);
+}
+@media (prefers-color-scheme : dark){
+    body.theme-auto{
+        --background-color:var(--dark-background-color);
+        --bacground-color-alt :var(--dark-bacground-color-alt);
+        --trim-color:var(--dark-trim-color);
+        --text-color:var(--dark-text-color);
+    }
+}
+
+header{
+    width: 100%;
+    height: 60px;
+    background-color: var(--bacground-color-alt);
+    position: fixed;
+    top: 0;
+    right: 0;
+    border-bottom: 1px solid var(--trim-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header img {
+    width: 50px;
+    height: 50px;
+}
+.header_select{
+    width: 60px;
+    height: 25px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    font-family: cursive;
+    padding: 0px 10px;
+    color: var(--text-color);
+}
+.header_select option{
+    color: #000;
+}
+.cardcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    margin-top: 80px;
+}
+.card{
+    width: 250px;
+    height: 370px;
+    background-color: var(--bacground-color-alt);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    overflow: hidden;
+    margin:  20px;
+    color: var(--text-color);
+}
+.card p {
+    padding: 10px;
+}
+.card h3{
+    padding: 0 10px;
+}
+.card img{
+    width: 250px;
+    height: 200px;
+}
+.section_p{
+    margin: 10px 40px;
+    color: var(--text-color);
+}
